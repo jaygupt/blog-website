@@ -34,3 +34,15 @@ app.get("/contact", function(req, res){
 app.get("/compose", function(req, res){
   res.render("compose"); 
 });
+
+app.post("/compose", function(req, res){
+  const title = req.body.title; 
+  const post = req.body.post; 
+  
+  const submission = {
+    title: title,
+    post: post
+  }; 
+
+  console.log(submission); 
+}); 
