@@ -3,7 +3,7 @@
     <% submissions.forEach(function(submission){ %>
     <div>
         <h1><%= submission.title %></h1>
-        <p><%= submission.post %></p>
+        <p><%= submission.post.substring(0, 100) %>...<a href="/submissions/<%= submission.title %>">Read More</a></p>
     </div>
     <% }) %>
 <% include partials/footer %>
